@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    lintOptions {
+        disable 'MissingTranslation'
+        disable 'ExtraTranslation'
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "ch.apesin.android.ap"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-core-ui:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+	implementation 'com.google.android.gms:play-services-ads:18.2.0'
+    compileOnly 'androidx.annotation:annotation:1.0.0'
+    compileOnly 'junit:junit:4.12'
+}
