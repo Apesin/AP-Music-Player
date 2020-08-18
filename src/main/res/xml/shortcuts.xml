@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/shortcut_play"
+		android:shortcutId="play"
+		android:shortcutDisabledMessage="@string/play"
+		android:shortcutLongLabel="@string/play"
+		android:shortcutShortLabel="@string/play">
+		<intent
+			android:action="ch.apesin.android.ap.action.TOGGLE_PLAYBACK"
+			android:targetClass="ch.apesin.android.ap.ShortcutPseudoActivity"
+			android:targetPackage="ch.apesin.android.ap"/>
+	</shortcut>
+
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/shortcut_random"
+		android:shortcutId="random"
+		android:shortcutDisabledMessage="@string/random"
+		android:shortcutLongLabel="@string/random"
+		android:shortcutShortLabel="@string/random">
+		<intent
+			android:action="ch.apesin.android.ap.action.RANDOM_MIX_AUTOPLAY"
+			android:targetClass="ch.apesin.android.ap.ShortcutPseudoActivity"
+			android:targetPackage="ch.apesin.android.ap"/>
+	</shortcut>
+
+</shortcuts> 
